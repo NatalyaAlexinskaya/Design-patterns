@@ -26,29 +26,9 @@ public class Letter {
 
     @Override
     public String toString() {
-        String string = "";
-
-        if (body == null && subject == null) {
-            string = "Кому: " + recepients + "\n" +
-                    "От кого: " + sender + "\n" +
-                    "Тема: Без темы" + "\n" +
-                    "Текст письма: ";
-        } else if (body == null) {
-            string = "Кому: " + recepients + "\n" +
-                    "От кого: " + sender + "\n" +
-                    "Тема: " + subject + "\n" +
-                    "Текст письма: ";
-        } else if (subject == null) {
-            string = "Кому: " + recepients + "\n" +
-                    "От кого: " + sender + "\n" +
-                    "Тема: Без темы" + "\n" +
-                    "Текст письма: '" + body + '\'';
-        } else {
-            string = "Кому: " + recepients + "\n" +
-                    "От кого: " + sender + "\n" +
-                    "Тема: " + subject + "\n" +
-                    "Текст письма: '" + body + '\'';
-        }
-        return string;
+        return "Кому: " + recepients + "\n" +
+                "От кого: " + sender + "\n" +
+                "Тема: " + (subject == null ? "Без темы" : subject) + "\n" +
+                "Текст письма: " + (body == null ? "" : '\'' + body + '\'');
     }
 }

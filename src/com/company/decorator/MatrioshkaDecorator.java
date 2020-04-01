@@ -8,7 +8,5 @@ public class MatrioshkaDecorator implements Matrioshka {
     }
 
     @Override
-    public String makeMatrioshka() {
-        return matrioshka.makeMatrioshka();
-    }
+    public String makeMatrioshka() { return matrioshka.makeMatrioshka(); }
 }

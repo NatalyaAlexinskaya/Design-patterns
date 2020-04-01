@@ -6,7 +6,7 @@ public class SizeMatrioshka extends MatrioshkaDecorator {
     }
 
     public String printSize() {
-        return " большая ";
+        return "большая ";
     }
 
     @Override
